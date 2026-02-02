@@ -126,16 +126,16 @@ const leaders = [
     image: new URL('../assets/pentsos/leader2.jpg', import.meta.url).href
   },
   {
-    name: 'Bro. Eljah S. Tingbah',
+    name: 'Bro. Eljah S. Tingban',
     role: 'Assistant',
-    bio: 'ro. Eljah S. Tingbah oversees over program coodination and development initiatives, ensuring programs meet community needs.',
+    bio: 'Bro. Eljah S. Tingban oversees over program coodination and development initiatives, ensuring programs meet community needs.',
     image: new URL('../assets/pentsos/leader-2.jpg', import.meta.url).href
   },
   {
     name: 'Bro. Aaron Zelee Dunnar',
     role: 'Secretary',
     bio: 'Bro. Aaron Zelee Dunnar manages administrative and operational activities of PENTSOS, ensuring smooth execution of all projects.',
-    image: new URL('../assets/pentsos/leader4.jpg', import.meta.url).href
+    image: new URL('../assets/youth/learder4.jpg', import.meta.url).href
   }
 ]
 </script>

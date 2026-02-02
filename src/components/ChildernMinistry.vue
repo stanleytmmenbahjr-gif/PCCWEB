@@ -64,7 +64,8 @@
             <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase text-[#333]">Our Vision</h2>
             <div class="h-1 w-12 bg-red-600 my-4 sm:my-6"></div>
             <p class="italic text-[#444] text-base sm:text-lg">
-              "To become a global Pentecostal church that is culturally relevant."
+              "To raise a new generation will that will preach the Gospel with clarity, 
+              Live a Live Worthy of their callings and spiritual filled with the Power."
             </p>
           </div>
 
@@ -72,7 +73,8 @@
             <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase text-[#333]">Our Mission</h2>
             <div class="h-1 w-12 bg-red-600 my-4 sm:my-6"></div>
             <p class="italic text-[#444] text-base sm:text-lg">
-              "To establish responsible and self-sustaining churches."
+              "To Empower and equip the young generation through biblical teaching and leadership 
+              for greater impact in Church and Society."
             </p>
           </div>
         </div>

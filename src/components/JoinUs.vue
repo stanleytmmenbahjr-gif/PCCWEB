@@ -114,8 +114,7 @@
 </template>
 
 <script setup>
-import { reactive, ref, onMounted } from 'vue'
-import emailjs from '@emailjs/browser'
+import { reactive, ref } from 'vue'
 
 const form = reactive({
   fullName: '',
@@ -132,36 +131,31 @@ const status = ref('')
 const message = ref('')
 const isSubmitting = ref(false)
 
-// Initialize EmailJS
-onMounted(() => {
-  emailjs.init('YOUR_PUBLIC_KEY_HERE')
-})
-
 async function handleSubmit() {
   status.value = ''
   message.value = ''
   isSubmitting.value = true
-  
   try {
-    const templateParams = {
-      to_email: 'pccliberia2025@gmail.com',
-      from_name: form.fullName,
-      from_email: form.email,
+    const payload = {
+      name: form.fullName,
       phone: form.phone,
+      email: form.email,
       gender: form.gender,
       marital_status: form.maritalStatus,
       address: form.address,
       born_again: form.bornAgain,
       ministry: form.ministry,
       message: form.message,
-      submit_date: new Date().toLocaleString()
+      source: 'join-form'
     }
 
-    await emailjs.send(
-      'YOUR_SERVICE_ID_HERE',
-      'YOUR_TEMPLATE_ID_HERE',
-      templateParams
-    )
+    const res = await fetch('http://localhost:3000/api/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+
+    if (!res.ok) throw new Error('Submit failed')
 
     status.value = 'success'
     message.value = 'Thank you — your membership request was received.'
@@ -169,7 +163,7 @@ async function handleSubmit() {
   } catch (err) {
     status.value = 'error'
     message.value = 'Failed to send message. Please try again.'
-    console.error('Email error:', err)
+    console.error('Submit error:', err)
   } finally {
     isSubmitting.value = false
   }

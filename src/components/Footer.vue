@@ -8,27 +8,20 @@
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
           </div>
           <p class="text-[15px] leading-relaxed text-gray-300">
-          Paynesville City <br/> Duport Road 
+          Paynesville City Church  <br/> The Church of Pentecost - Liberia
+        <br>Cowfield Last Junction, Adjacent The Orange Tower<br/>
+           Duport Road, Paynesville City
           </p>
         </div>
-
-        <div class="flex items-start space-x-5">
-          <div class="mt-1">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-          </div>
-          <p class="text-[15px] text-gray-300">
-            Paynesville City Church <br/>
-            Duport Road Adjacent The Orange Tower
-          </p>
         </div>
 
         <div class="flex items-start space-x-5">
           <div class="mt-1">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5.172V18a2 2 0 002 2h14a2 2 0 002-2V5.172a2 2 0 00-.586-1.414l-1.414-1.414A2 2 0 0017.586 1.75H6.414a2 2 0 00-1.414.586L3.586 3.758A2 2 0 003 5.172z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M10 14h4"/></svg>
           </div>
-          <p class="text-[15px] text-gray-300 font-bold uppercase tracking-tight">
+          <p class="text-[20px] md [20px] text-gray-300 font-bold uppercase tracking-tight">
             Telephone: (+231) 776548981 | 555877347 <br/>
-            Helpline: (+231) 7777777777
+            Helpline: (+231) 231 777443429
           </p>
         </div>
 
@@ -36,53 +29,40 @@
           <div class="mt-1">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
           </div>
-          <p class="text-[15px] text-gray-300 font-bold">info@paynesvillecitychurch.org</p>
+          <p class="text-[20px] text-gray-300 font-bold mg-20px flex-gap">info@pccliberia2025@gmail.com</p>
         </div>
       </div>
 
       <div class="flex flex-col items-start lg:items-center">
         <h3 class="text-lg sm:text-xl font-bold mb-4 sm:mb-6 tracking-wide">Follow us on Social Media</h3>
-        <div class="flex gap-3 sm:gap-4">
+        <div class="flex gap-3 sm:gap-4 pd below::gap-6">
         <!-- Facebook -->
-        <a
-          href="https://www.facebook.com/share/p/181uDkoYXA/"
-          aria-label="Facebook"
-          class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center
-                 text-orange-500 transition
-                 hover:bg-orange-500 hover:text-black hover:shadow-lg hover:shadow-orange-500/30"
-        >
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-            <path d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.326 24h11.495v-9.294H9.691V11.01h3.13V8.309c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.464.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.312h3.587l-.467 3.696h-3.12V24h6.116C23.403 24 24 23.403 24 22.674V1.326C24 .597 23.403 0 22.675 0z"/>
+       <!-- <div class="mt-8 sm:mt-12 md:mt-16 flex gap-4 sm:gap-6 md:gap-8 justify-center animate-fade-in"> -->
+        <a href="https://www.facebook.com/share/p/181uDkoYXA/" aria-label="Facebook" class="text-white hover:text-yellow-400 transition transform hover:-translate-y-1 hover:scale-110">
+          <svg class="w-8 sm:w-10 md:w-12 h-8 sm:h-10 md:h-12 fill-current drop-shadow-lg" viewBox="0 0 24 24">
+            <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12H16l-.5 3h-2.4v7A10 10 0 0 0 22 12Z"/>
           </svg>
         </a>
-
-        <!-- X -->
-        <a
-          href="#"
-          aria-label="X"
-          class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center
-                 text-orange-500 transition
-                 hover:bg-orange-500 hover:text-black hover:shadow-lg hover:shadow-orange-500/30"
-        >
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817-5.965 6.817H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231z"/>
-          </svg>
-        </a>
-
         
-        <!-- Instagram -->
-        <a
-          href="#"
-          aria-label="Instagram"
-          class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center
-                 text-orange-500 transition
-                 hover:bg-orange-500 hover:text-black hover:shadow-lg hover:shadow-orange-500/30"
-        >
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.343 3.608 1.319.975.975 1.257 2.242 1.319 3.608.058 1.266.069 1.645.069 4.84 0 3.204-.012 3.584-.069 4.85-.062 1.366-.344 2.633-1.319 3.608-.975.975-2.242 1.257-3.608 1.319-1.266.057-1.645.069-4.85.069-3.195 0-3.574-.012-4.84-.069-1.366-.062-2.633-.344-3.608-1.319-.976-.975-1.257-2.242-1.319-3.608C2.175 15.584 2.163 15.204 2.163 12c0-3.195.012-3.574.069-4.84.062-1.366.344-2.633 1.319-3.608.975-.976 2.242-1.257 3.608-1.319C8.426 2.175 8.806 2.163 12 2.163z"/>
+        <a href="#" aria-label="TikTok" class="text-white hover:text-yellow-400 transition transform hover:-translate-y-1 hover:scale-110">
+          <svg class="w-8 sm:w-10 md:w-12 h-8 sm:h-10 md:h-12 fill-current drop-shadow-lg" viewBox="0 0 24 24">
+            <path d="M16.5 1c.6 3.4 3 5.7 6.5 6v4.2c-2.1.1-4.1-.6-6-1.8v7.6a7.4 7.4 0 1 1-7.4-7.4c.3 0 .6 0 .9.1v4.3a3.1 3.1 0 1 0 3.1 3.1V1h3Z"/>
           </svg>
         </a>
 
+        <a href="#" aria-label="YouTube" class="text-blue hover:text-yellow-400 transition transform hover:-translate-y-1 hover:scale-110">
+          <svg class="w-8 sm:w-10 md:w-12 h-8 sm:h-10 md:h-12 fill-current drop-shadwo-lg" viewBox="0 0 24 24">
+            <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.4 31.4 0 0 0 24 12Z"/>
+          </svg>
+        </a>
+
+       <a href="#" aria-label="Instagram" class="text-white hover:text-yellow-400 transition transform hover:-translate-y-1 hover:scale-110">
+          <svg class="w-8 sm:w-10 md:w-12 h-8 sm:h-10 md:h-12 fill-current drop-shadow-lg" viewBox="0 0 24 24">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z"/>
+          </svg>
+        </a>
+        
+      <!-- </div> -->
         </div>
       </div>
 
@@ -106,13 +86,14 @@
         </div>
       </div>
 
-    </div>
+  
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] sm:text-[11px] font-bold text-gray-500 uppercase tracking-widest">
       <p>&copy; {{ new Date().getFullYear() }} Paynesville City Church. All Rights Reserved.</p>
       <div class="flex gap-6">
         <a href="#" class="hover:text-white">Privacy Policy</a>
         <a href="#" class="hover:text-white">Terms of Use</a>
+         <a href="#" class="hover:text-white">Build and Design By Stanley T M Menbah Jr</a>
       </div>
     </div>
   </footer>

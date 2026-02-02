@@ -63,17 +63,12 @@
           Join Us This Sunday
         </button>
 
-        <button
-          class="px-6 sm:px-10 py-2 sm:py-4 rounded-full border-2 border-white text-white font-semibold text-xs sm:text-base
-                 hover:bg-white/10 hover:scale-105 transition"
-        >
-          Watch Live
-        </button>
+        
       </div>
 
       <!-- Social Media -->
       <div class="mt-8 sm:mt-12 md:mt-16 flex gap-4 sm:gap-6 md:gap-8 justify-center animate-fade-in">
-        <a href="#" aria-label="Facebook" class="text-white hover:text-yellow-400 transition transform hover:-translate-y-1 hover:scale-110">
+        <a href="https://www.facebook.com/share/p/181uDkoYXA/" aria-label="Facebook" class="text-white hover:text-yellow-400 transition transform hover:-translate-y-1 hover:scale-110">
           <svg class="w-8 sm:w-10 md:w-12 h-8 sm:h-10 md:h-12 fill-current drop-shadow-lg" viewBox="0 0 24 24">
             <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12H16l-.5 3h-2.4v7A10 10 0 0 0 22 12Z"/>
           </svg>

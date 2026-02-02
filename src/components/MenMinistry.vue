@@ -50,7 +50,7 @@
         </p>
       </section>
 
-      <!-- MEN'S MINISTRY NEWS -->
+      <!-- MEN'S MINISTRY NEWS
       <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-20">
         <div class="text-center mb-6 sm:mb-10">
           <h2 class="text-2xl sm:text-3xl font-black uppercase">Men's Ministry News</h2>
@@ -73,7 +73,7 @@
             
           </article>
         </div>
-      </section>
+      </section> -->
 
       <!-- LEADERS -->
       <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-20 bg-gray-50 rounded-lg shadow-lg">
@@ -115,46 +115,27 @@ import Footer from './Footer.vue'
 import FloatingChat from './FloatingChat.vue'
 
 // Hero image
-const heroImg = new URL('../assets/men/hero.jpg', import.meta.url).href
+const heroImg = new URL('../assets/leader/men-hero.jpg', import.meta.url).href
 
 // Example news items
-const newsItems = [
-  {
-    date: 'Jan 10, 2026',
-    title: 'Men’s Outreach at Community Center',
-    image: new URL('../assets/men/news1.jpg', import.meta.url).href
-  },
-  {
-    date: 'Feb 14, 2026',
-    title: 'Leadership Training Seminar',
-    image: new URL('../assets/men/news2.jpg', import.meta.url).href
-  },
-  {
-    date: 'Mar 05, 2026',
-    title: 'Men’s Retreat Highlights',
-    image: new URL('../assets/men/news3.jpg', import.meta.url).href
-  }
-]
+
 
 // Leadership data
 const leaders = [
   {
     name: 'Elder Dave G. Borglers',
     role: 'Mens Leader',
-    bio: 'Eld. Dave is the Men’s Ministry Director, providing mentorship, spiritual guidance, and leadership training for members.',
-    image: new URL('../assets/men/leader1.jpg', import.meta.url).href
+    image: new URL('../assets/leader/leader-5.jpg', import.meta.url).href
   },
   {
     name: 'Mr. Fred Fallah',
     role: 'Assisant ',
-    bio: 'Mr. Fread Fallah assists in leadership training, mentoring, and community outreach programs. ([thecophq.org](https://thecophq.org/mens-ministry/))',
     image: new URL('../assets/men/leader2.jpg', import.meta.url).href
   },
 
   {
-    name: 'Mr. ',
+    name: 'Mr. Saye ',
     role: 'Secretary',
-    bio: 'Mr.  assists in leadership training, mentoring, and community outreach programs. ',
     image: new URL('../assets/men/leader2.jpg', import.meta.url).href
   },
 

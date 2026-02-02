@@ -4,6 +4,7 @@ const path = require('path');
 const cors = require('cors');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const nodemailer = require('nodemailer');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -12,6 +13,25 @@ const dbPath = path.join(__dirname, 'data.sqlite');
 // JWT auth setup
 const JWT_SECRET = process.env.JWT_SECRET || 'change_this_secret'
 const SALT_ROUNDS = 10
+
+// SMTP / mail setup (optional). Set these env vars to enable outgoing mail:
+// SMTP_HOST, SMTP_PORT, SMTP_SECURE ("true"/"false"), SMTP_USER, SMTP_PASS
+const SMTP_HOST = process.env.SMTP_HOST || ''
+const SMTP_PORT = process.env.SMTP_PORT || ''
+const SMTP_SECURE = process.env.SMTP_SECURE === 'true'
+const SMTP_USER = process.env.SMTP_USER || ''
+const SMTP_PASS = process.env.SMTP_PASS || ''
+let mailer = null
+if (SMTP_HOST && SMTP_PORT) {
+  mailer = nodemailer.createTransport({
+    host: SMTP_HOST,
+    port: Number(SMTP_PORT),
+    secure: SMTP_SECURE,
+    auth: SMTP_USER ? { user: SMTP_USER, pass: SMTP_PASS } : undefined
+  })
+  // verify connection
+  mailer.verify().then(() => console.log('SMTP transporter ready')).catch(err => console.warn('SMTP verify failed', err.message))
+}
 
 // Ensure users table exists and create initial admin user from env if needed
 function ensureUsersTable(db) {
@@ -23,19 +43,28 @@ function ensureUsersTable(db) {
 
   const adminUser = process.env.ADMIN_USER
   const adminPass = process.env.ADMIN_PASS
-  if (adminUser && adminPass) {
-    db.get('SELECT * FROM users WHERE username = ?', [adminUser], (err, row) => {
+  // Support multiple admin users via comma-separated env vars:
+  // ADMIN_USERS="a@example.com,b@example.com" and ADMIN_PASSES="pass1,pass2"
+  const adminUsers = (process.env.ADMIN_USERS || process.env.ADMIN_USER || '').split(',').map(s => s.trim()).filter(Boolean)
+  const adminPasses = (process.env.ADMIN_PASSES || process.env.ADMIN_PASS || '').split(',').map(s => s.trim())
+  adminUsers.forEach((username, i) => {
+    const pass = adminPasses[i] || adminPasses[0] || ''
+    if (!pass) {
+      console.warn('No password provided for admin user', username)
+      return
+    }
+    db.get('SELECT * FROM users WHERE username = ?', [username], (err, row) => {
       if (err) return console.error('User lookup error', err)
       if (!row) {
-        bcrypt.hash(adminPass, SALT_ROUNDS).then(hash => {
-          db.run('INSERT INTO users (username,password_hash) VALUES (?,?)', [adminUser, hash], (err2) => {
+        bcrypt.hash(pass, SALT_ROUNDS).then(hash => {
+          db.run('INSERT INTO users (username,password_hash) VALUES (?,?)', [username, hash], (err2) => {
             if (err2) console.error('Failed creating admin user', err2)
-            else console.log('Created initial admin user:', adminUser)
+            else console.log('Created initial admin user:', username)
           })
         }).catch(e => console.error('Hash error', e))
       }
     })
-  }
+  })
 }
 
 function requireAuth(req, res, next) {
@@ -81,7 +110,26 @@ app.post('/api/submit', (req, res) => {
       res.status(500).json({ error: 'db error' });
       return;
     }
-    res.json({ success: true, id: this.lastID });
+    const insertedId = this.lastID
+    res.json({ success: true, id: insertedId });
+
+    // Send email notification if mailer is configured. Recipients come from ADMIN_RECIPIENTS env or default list.
+    try {
+      const recipients = (process.env.ADMIN_RECIPIENTS || 'pccliberia2025@gmail.com,stanleytmmenbahjr@gmail.com').split(',').map(s => s.trim()).filter(Boolean)
+      if (mailer && recipients.length > 0) {
+        const text = `New submission:\n\nName: ${name || ''}\nEmail: ${email || ''}\nMessage: ${message || ''}\nSource: ${source || 'unknown'}\nCreated: ${created_at}`
+        const html = `<p><strong>New submission</strong></p><ul><li><strong>Name:</strong> ${name || ''}</li><li><strong>Email:</strong> ${email || ''}</li><li><strong>Message:</strong> ${message || ''}</li><li><strong>Source:</strong> ${source || 'unknown'}</li><li><strong>Created:</strong> ${created_at}</li></ul>`
+        mailer.sendMail({
+          from: process.env.FROM_EMAIL || SMTP_USER || 'no-reply@example.com',
+          to: recipients.join(','),
+          subject: `New submission #${insertedId}`,
+          text,
+          html
+        }).then(info => console.log('Email sent', info.messageId)).catch(e => console.error('Email send failed', e.message))
+      }
+    } catch (e) {
+      console.error('Notification error', e)
+    }
   });
 });
 

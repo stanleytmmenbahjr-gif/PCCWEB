@@ -46,11 +46,7 @@ const routes = [
     name: 'Gallery',
     component: () => import('../components/Gallery.vue')
   },
-  {
-    path: '/district-presbytery',
-    name: 'DistrictPresbytery',
-    component: () => import('../components/DistrictPresbytery.vue')
-  },
+  
   {
     path: '/district-executive',
     name: 'DistrictExecutive',

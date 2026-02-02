@@ -1,26 +1,7 @@
 <template>
   <div class="w-full fixed top-0 z-50">
 
-    <!-- Top utility bar (UNCHANGED TEXT) -->
-    <div class="bg-gray-100/20 backdrop-blur-sm border-b border-white/5">
-      <div class="max-w-7xl mx-auto px-2 sm:px-4 flex items-center justify-end h-6 sm:h-8">
-        <div class="flex items-center gap-1 sm:gap-2 text-[8px] sm:text-[10px]">
-          <!-- <a href="#" class="bg-blue-800 text-white px-2 py-0.5 rounded text-[10px]">
-            Join Us Today
-          </a>
-          <a href="#" class="bg-blue-800 text-white px-2 py-0.5 rounded text-[10px]">
-            FIND our Location
-          </a>
-          <a href="#" class="bg-red-600 text-white px-2 py-0.5 rounded text-[10px]">
-            WATCH LIVE SERVICE -->
-          <!-- </a>
-           <a href="#" class="flex items-center gap-1 px-2 py-0.5 border-l border-white/10 text-gray-800 text-[11px]">
-            English -->
-          <!-- </a> --> 
-        </div>
-      </div>
-    </div>
-
+    
     <!-- Main nav -->
     <nav class="bg-gradient-to-br from-[#001a3d] via-[#002D62] to-[#00152e]">
       <div class="max-w-7xl mx-auto px-2 sm:px-4">
@@ -47,10 +28,10 @@
               <li class="mr-1 lg:mr-2">
                 <div class="flex flex-col items-start leading-tight">
                   <span class="text-[9px] lg:text-xs font-bold">
-                    PAYNESVILLE CITY CHURCH
+                    <!-- PAYNESVILLE CITY CHURCH -->
                   </span>
                   <span class="text-[7px] lg:text-[10px] tracking-wider">
-                    CHURCH OF PENTECOST
+                    <!-- CHURCH OF PENTECOST -->
                   </span>
                 </div>
               </li>
@@ -78,7 +59,6 @@
                 <div class="dropdown">
                   <a href="#" @click.prevent="goTo('/national-area-heads')">National and Area Head</a>
                   <a href="#" @click.prevent="goTo('/district-executive')">District Excutive</a>
-                  <a href="#" @click.prevent="goTo('/district-presbytery')">District Prebetuary</a>
                 </div>
               </li>
 
@@ -97,7 +77,8 @@
                 <a href="#" class="nav-item text-xs lg:text-sm">MEDIA</a>
                 <div class="dropdown">
                   <a href="#" @click.prevent="goTo('/media')">MEDIA</a>
-                  <a href="#" @click.prevent="goTo('/secretarial')">Secretarial</a>
+                  <a href="#" @click.prevent="goTo('/secretarial')">Secretariat</a>
+                  <a href="#" @click.prevent="goTo('/Submissions.vue')">Submissions</a>
                   <a href="#" @click.prevent="goTo('/gallery')">Gallery</a>
                 </div>
               </li>
@@ -162,7 +143,6 @@
           <div class="pl-4 space-y-2 text-[10px] font-normal">
             <div @click.prevent="goTo('/national-area-heads')" class="cursor-pointer text-gray-300 hover:text-white">National & Area Head</div>
             <div @click.prevent="goTo('/district-executive')" class="cursor-pointer text-gray-300 hover:text-white">District Executive</div>
-            <div @click.prevent="goTo('/district-presbytery')" class="cursor-pointer text-gray-300 hover:text-white">District Presbytery</div>
           </div>
         </div>
         <div class="px-4 py-3 hover:bg-white/10 rounded transition-colors">

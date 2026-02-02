@@ -25,7 +25,7 @@
           <h2 class="text-2xl sm:text-3xl md:text-4xl font-black uppercase mb-3 sm:mb-4">Our Vision</h2>
           <div class="h-1 w-12 bg-red-600 mb-4 sm:mb-6"></div>
           <p class="text-base sm:text-lg leading-relaxed">
-            To become a global Pentecostal church that is culturally relevant in vibrant evangelism, church planting, discipleship and holistic ministry.
+            To raise Spirit-filled women that are culturally relevant in vibrant evangelism, discipleship and holistic ministry.
           </p>
         </div>
         
@@ -33,7 +33,7 @@
           <h2 class="text-2xl sm:text-3xl md:text-4xl font-black uppercase mb-3 sm:mb-4">Our Mission</h2>
           <div class="h-1 w-12 bg-red-600 mb-4 sm:mb-6"></div>
           <p class="text-base sm:text-lg leading-relaxed">
-            We exist to establish responsible and self-sustaining churches filled with committed, Spirit-filled Christians of character, who will impact their communities.
+            We exist to establish responsible and self-sustaining churches filled with committed, Spirit-filled women of character, who will impact their communities.
           </p>
         </div>
       </section>
@@ -42,16 +42,16 @@
       <section class="max-w-6xl mx-auto px-6 pb-24 text-gray-800">
         <h3 class="text-2xl font-bold uppercase mb-4">About the Women’s Ministry</h3>
         <p class="text-lg leading-relaxed space-y-4">
-          Besides a core function of praying for the Church, the Women’s Ministry, which embraces all the womenfolk, is responsible for giving employable and vocational skills, and training in home management to the women. It meets on Tuesdays. :contentReference[oaicite:4]{index=4}
+          Besides a core function of praying for the Church, the Women’s Ministry, which embraces all the womenfolk, is responsible for home management training to the women. It meets on Tuesdays.
           <br/>
-          The Women’s Ministry organises retreats, seminars, workshops, lectures and symposia on marriage enrichment, wives' responsibilities at home, child welfare, education, business management and techniques. It also carries out evangelism, counselling and sponsorship activities to help the needy in the church and in society. :contentReference[oaicite:5]{index=5}
+          The Women’s Ministry organises retreats, seminars, workshops, lectures and symposia on marriage enrichment, wives' responsibilities at home, child welfare, education, business management and techniques. It also carries out evangelism, and counselling  in the church and in society.
           <br/>
-          Additionally, the ministry ministers to single mothers, orphans, widows, lady professionals, the aged, business women, and HIV/AIDS victims, and undertakes hospital and media evangelism, contributing to government poverty alleviation programmes. :contentReference[oaicite:6]{index=6}
+       
         </p>
       </section>
 
       <!-- WOMEN'S MINISTRY NEWS -->
-      <section class="max-w-6xl mx-auto px-6 py-20">
+      <!-- <section class="max-w-6xl mx-auto px-6 py-20">
         <div class="text-center mb-8 sm:mb-10 md:mb-12">
           <h2 class="text-2xl sm:text-3xl md:text-4xl font-black uppercase">Women's Ministry News</h2>
           <div class="h-1 w-16 sm:w-20 bg-red-600 mt-3 sm:mt-4 mx-auto"></div>
@@ -72,7 +72,7 @@
             </div>
           </article>
         </div>
-      </section>
+      </section> -->
 
       <!-- LEADERS -->
       <section class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-50 rounded-lg shadow-lg">
@@ -115,37 +115,22 @@ import FloatingChat from './FloatingChat.vue'
 // Hero image
 const heroImg = new URL('../assets/women/hero.jpg', import.meta.url).href
 
-// Example news items — replace with your own later
-const newsItems = [
-  {
-    date: 'December 29, 2025',
-    title: 'Women Bring Christmas Joy To New Life Orphanage',
-    image: new URL('../assets/women/news1.jpg', import.meta.url).href
-  },
-  {
-    date: 'December 29, 2025',
-    title: 'Elmina Area Women’s Ministry Donates To Hospital',
-    image: new URL('../assets/women/news2.jpg', import.meta.url).href
-  },
-  {
-    date: 'October 28, 2025',
-    title: 'Women’s Ministry Donates To Pentecost Vocational School',
-    image: new URL('../assets/women/news3.jpg', import.meta.url).href
-  }
-]
 
 // Leadership data from the real page
 const leaders = [
   {
-    name: 'Deaconess Philomina Mireku',
-    role: 'Director',
-    bio: 'Deaconess Philomina Mireku is the Nurse Manager in-charge of the Eastern Regional Hospital in Koforidua with over 33 years of dedicated service and pastoral ministry. :contentReference[oaicite:7]{index=7}',
-    image: new URL('../assets/women/leader1.jpg', import.meta.url).href
+    name: 'Deaconess Mia Sackor',
+    role: 'Women Leaders',
+    image: new URL('../assets/leader/leader-7.jpg', import.meta.url).href
   },
   {
-    name: 'Deaconess Vivian Amfo',
-    role: 'Deputy Director',
-    bio: 'Deaconess Vivian Amfo holds a Bachelor’s Degree in Psychology and an MBA in Human Resources. She has served in leadership roles and ministry development. :contentReference[oaicite:8]{index=8}',
+    name: 'Madam Rita George',
+    role: 'Assistant Women Leaders', 
+    image: new URL('../assets/leader/rita.jpg', import.meta.url).href
+  },
+  {
+    name: 'Deconess Victoria ',
+    role: 'Secretary', 
     image: new URL('../assets/women/leader2.jpg', import.meta.url).href
   }
 ]

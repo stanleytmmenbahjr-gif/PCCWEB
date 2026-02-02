@@ -180,8 +180,8 @@ onUnmounted(() => clearInterval(interval))
 const leaders = [
   { name: 'Decon Samuel Assah', role: 'Youth Leader', image: new URL('../assets/youth/learder1.jpg', import.meta.url).href },
   { name: 'Sis. Garmai Sarngio', role: 'Assistant', image: new URL('../assets/youth/learder2.jpg', import.meta.url).href },
-  { name: 'Bro. Jerry', role: 'Secretary', image: new URL('../assets/youth/learder2.jpg', import.meta.url).href },
-  { name: 'Aaron Zelee Dunar', role: 'Coordinator', image: new URL('../assets/youth/learder1.jpg', import.meta.url).href }
+  { name: 'Bro. Jerry', role: 'Secretary', image: new URL('../assets/youth/learder3.jpg', import.meta.url).href },
+  { name: 'Aaron Zelee Dunar', role: 'Coordinator', image: new URL('../assets/youth/learder4.jpg', import.meta.url).href }
 ]
 
 const newsItems = [

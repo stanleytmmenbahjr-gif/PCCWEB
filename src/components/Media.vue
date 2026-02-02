@@ -5,9 +5,9 @@
     <main class="pt-32">
 
       <!-- HERO -->
-      <section class="relative h-[350px] sm:h-[420px] md:h-[600px] bg-black">
+      <section class="relative h-[350px] sm:h-[400px] md:h-[500px] bg-black">
         <img :src="heroImg" class="absolute inset-0 w-full h-full object-cover opacity-70"/>
-        <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-black/90"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60"></div>
         <div class="relative z-10 text-center px-4 sm:px-6 md:px-0 max-w-4xl mx-auto top-1/2 -translate-y-1/2">
           <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase text-white leading-tight">
             PAYNESVILLE CITY CHURCH MEDIA
@@ -23,7 +23,7 @@
       <section class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 text-gray-800 space-y-8 sm:space-y-10">
 
         <div>
-          <h2 class="text-2xl sm:text-3xl md:text-4xl font-black uppercase mb-2 sm:mb-3">About PENT TV</h2>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-black uppercase mb-2 sm:mb-3">About PCC MEDIA </h2>
           <p class="text-base sm:text-lg leading-relaxed">
             PCC MEDIA is a digital media team with the core purpose of spreading the gospel, discipleship, and holistic teaching through faith-filled content.
           </p>
@@ -117,7 +117,7 @@ import Footer from './Footer.vue'
 import FloatingChat from './FloatingChat.vue'
 
 // Hero background
-const heroImg = new URL('../assets/penttv/hero.jpg', import.meta.url).href
+const heroImg = new URL('../assets/Media/media-hero.jpg', import.meta.url).href
 
 // Example featured media items
 const mediaItems = [
@@ -144,13 +144,13 @@ const leaders = [
     name: 'Stanley T M Menbah Jr',
     role: 'Director',
     bio: 'Oversees and lead the team.',
-    image: new URL('../assets/Media/Stan.jpg', import.meta.url).href
+    image: new URL('../assets/Media/leader-dir.jpg', import.meta.url).href
   },
    {
     name: 'Bro. Billison Saye Sunwabe Jr.',
     role: 'Assistant Director and Head of Editing',
     bio: 'Leads creativess and impactful media content.',
-    image: new URL('../assets/penttv/leader2.jpg', import.meta.url).href
+    image: new URL('../assets/Media/leader-ass.jpg', import.meta.url).href
   },
  
   {
@@ -163,13 +163,13 @@ const leaders = [
     name: 'Bro. Myers Justice Wamah',
     role: 'Head of Content',
     bio: 'Leads development of creative and impactful media content.',
-    image: new URL('../assets/penttv/leader2.jpg', import.meta.url).href
+    image: new URL('../assets/Media/leader-con.jpg', import.meta.url).href
   },
   {
-    name: 'Sis. Lease Bright',
+    name: 'Sis. LEES K DORLIAE',
     role: 'Secreatry',
     bio: 'keep Records, mines and dialy team schedule.',
-    image: new URL('../assets/penttv/leader4.jpg', import.meta.url).href
+    image: new URL('../assets/Media/leader-sec.jpg', import.meta.url).href
   }
 ]
 </script>

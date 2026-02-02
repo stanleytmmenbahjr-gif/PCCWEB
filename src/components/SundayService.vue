@@ -75,7 +75,7 @@
             </div>
 
             <a
-              href="#"
+              href="@click-joinus.vue"
               class="block text-center py-2 sm:py-4 bg-white text-[#002D62]
                      font-bold uppercase tracking-widest text-[9px] sm:text-[11px]
                      hover:bg-[#E31E24] hover:text-white transition-colors"
@@ -137,7 +137,7 @@
             </div>
 
             <a
-              href="#"
+              href="@click joinUs.vue"
               class="block text-center py-2 sm:py-4 border-2 border-white
                      font-bold uppercase tracking-widest text-[9px] sm:text-[11px]
                      hover:bg-[#E31E24] hover:border-[#E31E24] transition-all"
@@ -153,5 +153,5 @@
 </template>
 
 <script setup>
-const sundayImg = new URL('../assets/youth/bacground5.jpg', import.meta.url).href
+const sundayImg = new URL('../assets/Media/gallery1.jpg', import.meta.url).href
 </script>
