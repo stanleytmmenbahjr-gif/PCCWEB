@@ -9,7 +9,6 @@
 
 <script>
 import WelcomeHero from '../components/WelcomeHero.vue'
-import Submissions from './Submissions.vue'
 import SundayService from '../components/SundayService.vue'
 import WhatToExpect from '../components/WhatToExpect.vue'
 import Footer from '../components/Footer.vue'
@@ -18,7 +17,6 @@ export default {
   name: 'Home',
   components: {
     WelcomeHero,
-    Submissions,
     SundayService,
     WhatToExpect,
     Footer

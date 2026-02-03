@@ -78,7 +78,7 @@
                 <div class="dropdown">
                   <a href="#" @click.prevent="goTo('/media')">MEDIA</a>
                   <a href="#" @click.prevent="goTo('/secretarial')">Secretariat</a>
-                  <a href="#" @click.prevent="goTo('/Submissions.vue')">Submissions</a>
+
                   <a href="#" @click.prevent="goTo('/gallery')">Gallery</a>
                 </div>
               </li>

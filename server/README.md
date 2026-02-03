@@ -1,58 +1,79 @@
-Setup and run the local API server
+# Email Backend (Node)
 
-1. From the `pcc-web` folder, install dependencies:
+This simple Express server receives submissions from JoinUs and ContactUs forms and emails them to `pccliberia2025@gmail.com` by default.
 
-```bash
-npm install
+## Setup
+
+1. Install dependencies:
+   ```bash
+   cd server
+   npm install
+   ```
+
+2. Create a `.env` file (see `.env.example`) and set SMTP credentials.
+3. Start the server:
+   ```bash
+   npm run start
+   ```
+
+## Endpoints
+
+### `POST /api/join-us`
+
+**Body (JSON):**
+```json
+{
+  "name": "Jane Doe",
+  "email": "jane@example.com",
+  "phone": "+231555000",
+  "message": "I want to join"
+}
 ```
 
-2. Start the server:
+### `POST /api/contact-us`
+
+**Body (JSON):**
+```json
+{
+  "name": "Jane Doe",
+  "email": "jane@example.com",
+  "subject": "Question",
+  "message": "Hello!"
+}
+```
+
+## Notes
+- The destination email defaults to `pccliberia2025@gmail.com`. You can override it with `TO_EMAIL`.
+- `FROM_EMAIL` must be a valid sender for your SMTP provider.
+- `CORS_ORIGIN` can be set to a comma-separated list of allowed origins.
+- The server adds sender metadata like IP and user-agent to the email body.
+- **Development:** if no SendGrid or SMTP config is provided and `NODE_ENV` is not `production`, the server will create a temporary Ethereal account and log a preview URL for sent emails so you can view them locally.
+
+## Testing
+
+From the project root you can start the server:
 
 ```bash
 npm run server
 ```
 
-The server listens on port 3000 and exposes:
+Quick curl examples:
 
-- `POST /api/submit` — accept JSON { name, email, message, source }
-- `GET /api/submissions` — return stored submissions
-
-Data is stored in `pcc-web/server/data.sqlite`.
-
-Admin access
------------
-
-The submissions endpoints are protected with HTTP Basic auth. Set environment variables before starting the server:
+- Join form:
 
 ```bash
-export ADMIN_USER=admin
-export ADMIN_PASS=strongpassword
-npm run server
+curl -X POST http://localhost:3000/api/join-us \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Jane Doe","email":"jane@example.com","phone":"+231555000","message":"I want to join"}'
 ```
 
-Access from curl:
+- Contact form:
 
 ```bash
-curl -u admin:strongpassword http://localhost:3000/api/submissions
-curl -u admin:strongpassword -O http://localhost:3000/api/submissions/export
+curl -X POST http://localhost:3000/api/contact-us \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Jane Doe","email":"jane@example.com","subject":"Question","message":"Hello!"}'
 ```
 
-The admin UI is at the route `/admin/submissions` in the SPA — enter the same credentials there to view and export submissions.
+If running in development without SMTP/SendGrid you will see an Ethereal preview URL logged when emails are sent; open that URL in your browser to inspect the message.
 
-JWT admin flow
---------------
-
-This server also supports a JWT-based admin flow. Set `ADMIN_USER` and `ADMIN_PASS` before first start to create an initial admin user. Then login to receive a token:
-
-```bash
-curl -X POST -H "Content-Type: application/json" -d '{"username":"admin","password":"strongpassword"}' http://localhost:3000/api/admin/login
-```
-
-You will receive a JSON `{ "token": "..." }`. Use this token in the SPA admin page (or in curl) as a Bearer token:
-
-```bash
-curl -H "Authorization: Bearer <token>" http://localhost:3000/api/submissions
-curl -H "Authorization: Bearer <token>" -O http://localhost:3000/api/submissions/export
-```
-
-The SPA admin page `/admin/submissions` now uses this JWT login flow. The token is stored in `localStorage` for convenience.

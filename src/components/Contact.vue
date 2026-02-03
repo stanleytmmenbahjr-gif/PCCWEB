@@ -113,10 +113,12 @@
           </div>
 
           <button
+            :disabled="isSubmitting"
             type="submit"
-            class="bg-red-600 hover:bg-red-700 text-white font-bold px-6 sm:px-8 py-2 sm:py-3 rounded-md transition-all duration-300 text-sm sm:text-base w-full"
+            class="bg-red-600 hover:bg-red-700 disabled:opacity-50 text-white font-bold px-6 sm:px-8 py-2 sm:py-3 rounded-md transition-all duration-300 text-sm sm:text-base w-full"
           >
-            Send Message
+            <span v-if="!isSubmitting">Send Message</span>
+            <span v-else>Sending…</span>
           </button>
 
           <p v-if="successMessage" class="mt-4 text-green-600 font-semibold text-sm sm:text-base">
@@ -155,11 +157,6 @@ import NavBar from './NavBar.vue'
 import Footer from './Footer.vue'
 import FloatingChat from './FloatingChat.vue'
 import { ref } from 'vue'
-import emailjs from '@emailjs/browser'
-
-// Initialize EmailJS with public key from environment variables
-emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '')
-
 // Hero background image
 const heroImg = new URL('../assets/Media/hero.jpg', import.meta.url).href
 
@@ -172,33 +169,44 @@ const form = ref({
 
 const successMessage = ref('')
 const errorMessage = ref('')
+const isSubmitting = ref(false)
 
-// Submit form and send email
+// Submit form and send email via server endpoint
 const handleSubmit = async () => {
   errorMessage.value = ''
   successMessage.value = ''
+  isSubmitting.value = true
   
   try {
-    const result = await emailjs.send(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID || '',
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '',
-      {
-        to_email: import.meta.env.VITE_CONTACT_EMAIL || 'info@pccliberia2025@gmail.com',
-        from_name: form.value.name,
-        from_email: form.value.email,
-        message: form.value.message
-      }
-    )
-    
-    if (result.status === 200) {
-      form.value = { name: '', email: '', message: '' }
-      successMessage.value = 'Thank you! Your message has been sent.'
-      setTimeout(() => { successMessage.value = '' }, 5000)
+    const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:3000'
+    const payload = {
+      name: form.value.name,
+      email: form.value.email,
+      subject: 'Website Contact',
+      message: form.value.message
     }
+
+    const res = await fetch(`${API_BASE}/api/contact-us`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+
+    if (!res.ok) {
+      // try to show server message
+      const body = await res.json().catch(() => null)
+      throw new Error((body && body.error) || 'Send failed')
+    }
+
+    form.value = { name: '', email: '', message: '' }
+    successMessage.value = 'Thank you! Your message has been sent.'
+    setTimeout(() => { successMessage.value = '' }, 5000)
   } catch (err) {
-    console.error('Email send failed', err)
-    errorMessage.value = 'Failed to send message. Please try again later.'
+    console.error('Contact send failed', err)
+    errorMessage.value = err && err.message ? err.message : 'Failed to send message. Please try again later.'
     setTimeout(() => { errorMessage.value = '' }, 5000)
+  } finally {
+    isSubmitting.value = false
   }
 }
 </script>

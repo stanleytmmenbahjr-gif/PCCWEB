@@ -10,22 +10,23 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "server": "node server/index.cjs"
+    "server": "node server/index.cjs",
+    "dev:server": "nodemon --watch server --ext cjs,js --exec node server/index.cjs",
+    "test:server": "node server/test/send-samples.js",
+    "test:server:run": "node server/test/run-all.js"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.4.1",
     "@sendgrid/mail": "^8.1.6",
-    "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
     "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.0",
     "nodemailer": "^6.9.3",
-    "sqlite3": "^5.1.6",
     "vue": "^3.5.26",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.3",
+    "nodemon": "^2.0.22",
     "vite": "^7.3.0",
     "vite-plugin-vue-devtools": "^8.0.5"
   }

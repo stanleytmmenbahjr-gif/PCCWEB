@@ -67,11 +67,7 @@ const routes = [
     name: 'JoinUs',
     component: () => import('../components/JoinUs.vue')
   },
-  {
-    path: '/admin/submissions',
-    name: 'Submissions',
-    component: () => import('../views/Submissions.vue')
-  },
+
   {
     path: '/chat-with-us',
     name: 'ChatWithUs',

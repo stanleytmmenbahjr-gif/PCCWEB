@@ -136,26 +136,25 @@ async function handleSubmit() {
   message.value = ''
   isSubmitting.value = true
   try {
+    const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:3000'
     const payload = {
       name: form.fullName,
-      phone: form.phone,
       email: form.email,
-      gender: form.gender,
-      marital_status: form.maritalStatus,
-      address: form.address,
-      born_again: form.bornAgain,
-      ministry: form.ministry,
-      message: form.message,
-      source: 'join-form'
+      phone: form.phone,
+      // Include the other form details inside the message so the email contains full context
+      message: `Gender: ${form.gender || ''}\nMarital status: ${form.maritalStatus || ''}\nAddress: ${form.address || ''}\nBorn again: ${form.bornAgain || ''}\nMinistry: ${form.ministry || ''}\n\n${form.message || ''}`
     }
 
-    const res = await fetch('http://localhost:3000/api/submit', {
+    const res = await fetch(`${API_BASE}/api/join-us`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     })
 
-    if (!res.ok) throw new Error('Submit failed')
+    if (!res.ok) {
+      const body = await res.json().catch(() => null)
+      throw new Error((body && body.error) || 'Submit failed')
+    }
 
     status.value = 'success'
     message.value = 'Thank you — your membership request was received.'
