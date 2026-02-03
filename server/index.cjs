@@ -109,7 +109,15 @@ app.post('/api/contact-us', async (req, res) => {
   }
 });
 
-app.get('/api/health', (req, res) => res.json({ ok: true, mailer: sendVia || null }));
+app.get('/api/health', (req, res) => {
+  const from = req.headers['x-forwarded-for'] || req.ip || req.connection && req.connection.remoteAddress || 'unknown'
+  console.log(`Health check from ${from} (pid=${process.pid})`)
+  res.json({ ok: true, mailer: sendVia || null, pid: process.pid, uptime: process.uptime() })
+});
+
+app.get('/api/debug', (req, res) => {
+  res.json({ pid: process.pid, uptime: process.uptime(), sendVia: sendVia || null })
+})
 
 app.use((err, req, res, next) => {
   console.error('Unhandled error', err && err.stack || err);
@@ -124,9 +132,9 @@ process.on('unhandledRejection', (reason) => {
   console.error('Unhandled rejection', reason && reason.stack || reason);
 });
 
-app.listen(PORT, () => {
-  console.log(`Email server listening on http://localhost:${PORT}`);
+// Bind explicitly on all interfaces to avoid platform-specific binding issues
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Email server listening on http://0.0.0.0:${PORT} (pid=${process.pid})`);
   console.log('Mailer:', sendVia || 'none');
-  // If using Ethereal, warn that preview URLs will be logged per-message
   if (sendVia === 'ethereal') console.log('Ethereal is active — preview URLs will appear in logs for each sent message.');
 });

@@ -56,14 +56,15 @@
 
       <!-- CTA Buttons -->
       <div class="mt-6 sm:mt-10 flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-4 justify-center">
-        <button
+        <router-link
+          to="/join"
           class="px-6 sm:px-10 py-2 sm:py-4 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-blue-950 font-bold text-xs sm:text-base shadow-lg
-                 hover:from-yellow-300 hover:to-orange-400 transition transform hover:-translate-y-1"
+                 hover:from-yellow-300 hover:to-orange-400 transition transform hover:-translate-y-1 text-center"
+          aria-label="Join Us This Sunday"
         >
           Join Us This Sunday
-        </button>
+        </router-link>
 
-        
       </div>
 
       <!-- Social Media -->

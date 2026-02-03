@@ -74,14 +74,15 @@
               </div>
             </div>
 
-            <a
-              href="@click-joinus.vue"
+            <router-link
+              to="/join"
               class="block text-center py-2 sm:py-4 bg-white text-[#002D62]
                      font-bold uppercase tracking-widest text-[9px] sm:text-[11px]
                      hover:bg-[#E31E24] hover:text-white transition-colors"
+              aria-label="Visit Us Today — Join the Church"
             >
              Visit Us Today 
-            </a>
+            </router-link>"
           </div>
         </div>
 
@@ -136,14 +137,15 @@
               </div>
             </div>
 
-            <a
-              href="@click joinUs.vue"
+            <router-link
+              to="/join"
               class="block text-center py-2 sm:py-4 border-2 border-white
                      font-bold uppercase tracking-widest text-[9px] sm:text-[11px]
                      hover:bg-[#E31E24] hover:border-[#E31E24] transition-all"
+              aria-label="Join Us — Join the Church"
             >
               Join Us 
-            </a>
+            </router-link>
           </div>
         </div>
 
