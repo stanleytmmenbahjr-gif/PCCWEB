@@ -123,7 +123,7 @@ const leaders = [
     name: 'Madam Dorylyn London',
     role: 'District Directress',
     bio: 'Madam Dorylyn London coordinates relief and educational programs for vulnerable communities.',
-    image: new URL('../assets/pentsos/leader2.jpg', import.meta.url).href
+    image: new URL('../assets/pentsos/leader-4.jpg', import.meta.url).href
   },
   {
     name: 'Bro. Eljah S. Tingban',

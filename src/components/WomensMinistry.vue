@@ -42,7 +42,7 @@
       <section class="max-w-6xl mx-auto px-6 pb-24 text-gray-800">
         <h3 class="text-2xl font-bold uppercase mb-4">About the Women’s Ministry</h3>
         <p class="text-lg leading-relaxed space-y-4">
-          Besides a core function of praying for the Church, the Women’s Ministry, which embraces all the womenfolk, is responsible for home management training to the women. It meets on Tuesdays.
+          Besides a core function of praying for the Church, the Women’s Ministry, which embraces all the womenfolk, is responsible for home management training to the women. It meets on every second and last Tuesdays.
           <br/>
           The Women’s Ministry organises retreats, seminars, workshops, lectures and symposia on marriage enrichment, wives' responsibilities at home, child welfare, education, business management and techniques. It also carries out evangelism, and counselling  in the church and in society.
           <br/>
@@ -113,7 +113,7 @@ import Footer from './Footer.vue'
 import FloatingChat from './FloatingChat.vue'
 
 // Hero image
-const heroImg = new URL('../assets/women/hero.jpg', import.meta.url).href
+const heroImg = new URL('../assets/leader/hero-women.jpg', import.meta.url).href
 
 
 // Leadership data from the real page
@@ -129,9 +129,9 @@ const leaders = [
     image: new URL('../assets/leader/rita.jpg', import.meta.url).href
   },
   {
-    name: 'Deconess Victoria ',
+    name: 'Deconess Victoria Thampson ',
     role: 'Secretary', 
-    image: new URL('../assets/women/leader2.jpg', import.meta.url).href
+    image: new URL('../assets/leader/vick.jpg', import.meta.url).href
   }
 ]
 </script>

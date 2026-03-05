@@ -93,7 +93,7 @@
       <div class="flex gap-6">
         <a href="#" class="hover:text-white">Privacy Policy</a>
         <a href="#" class="hover:text-white">Terms of Use</a>
-         <a href="#" class="hover:text-white">Build and Design By Stanley T M Menbah Jr</a>
+        <a href="#" class="hover:text-white">Build and Design By Stanley T M Menbah Jr</a>
       </div>
     </div>
   </footer>

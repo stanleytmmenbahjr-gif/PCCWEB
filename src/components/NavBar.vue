@@ -50,7 +50,7 @@
                   <a href="#" @click.prevent="goTo('/about-us')">ABOUT US</a>
                   <a href="#" @click.prevent="goTo('/vision')">VISION</a>
                   <a href="#">MISSION</a>
-                  <a href="#">BRIEF HISTORY</a>
+                  <!-- <a href="#">BRIEF HISTORY</a> -->
                 </div>
               </li>
 

@@ -130,7 +130,7 @@ const leaders = [
   {
     name: 'Mr. Fred Fallah',
     role: 'Assisant ',
-    image: new URL('../assets/men/leader2.jpg', import.meta.url).href
+    image: new URL('../assets/leader/fred.jpg', import.meta.url).href
   },
 
   {

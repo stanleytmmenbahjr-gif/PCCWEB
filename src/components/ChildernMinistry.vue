@@ -82,7 +82,7 @@
 
       <!-- LEADERSHIP (REDUCED SIZE) -->
       <section class="bg-[#e1e2dd] py-20 border-y border-gray-300">
-        <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-4xl mx-auto px-6">
           <h2 class="text-3xl font-black uppercase text-[#333] mb-12">
             Children Ministry Leadership
           </h2>
@@ -170,10 +170,9 @@ onMounted(() => {
 onUnmounted(() => clearInterval(timer))
 
 const leaders = [
-  { name: 'Leader One', role: 'Ministry Head', bio: 'Oversees the ministry.', image: img11 },
-  { name: 'Leader Two', role: 'Assistant', bio: 'Supports teaching.', image: img12 },
-  { name: 'Leader Three', role: 'Supervisor', bio: 'Ensures doctrine.', image: img27 },
-  { name: 'Leader Four', role: 'Activities', bio: 'Coordinates events.', image: img28 }
+  { name: 'Wonwin Doyen', role: 'Ministry Head', image: img11 },
+  { name: 'Mrs. Princess Ansah', role: 'Assistant', image: img12 },
+  { name: 'Princess ', role: 'Teacher', image: img27 },
 ]
 
 const newsItems = [
