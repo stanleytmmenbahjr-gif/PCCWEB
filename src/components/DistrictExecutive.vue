@@ -65,13 +65,13 @@
               />
             </div>
             <div class="p-6">
-            <h3 class="text-xl font-bold uppercase text-gray-900">
-              {{ member.name }}
-            </h3>
-            <p class="text-red-600 uppercase tracking-wide mb-2">
-              {{ member.role }}
-            </p>
-            <p class="text-gray-800 text-sm leading-relaxed">{{ member.bio }}</p>
+              <h3 class="text-xl font-bold uppercase text-gray-900">
+                {{ member.name }}
+              </h3>
+              <p class="text-red-600 uppercase tracking-wide mb-2">
+                {{ member.role }}
+              </p>
+              <p class="text-gray-800 text-sm leading-relaxed">{{ member.bio }}</p>
             </div>
           </div>
         </div>
@@ -79,24 +79,26 @@
 
     </main>
 
+    <!-- OTHER ORDAINED OFFICERS -->
     <section class="max-w-7xl mx-auto px-6 py-20">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-black uppercase">OTHER ORDAINED OFFICERS</h2>
-          <div class="h-1 w-20 bg-red-600 mx-auto mt-4"></div>
-        </div>
-         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center">
-          <div
-            v-for="(member, idx) in members"
-            :key="idx"
-            class="group bg-white border rounded-lg shadow-md hover:shadow-xl transition-all overflow-hidden"
-          >
-            <div class="relative h-64 w-full bg-gray-100">
-              <img
-                :src="member.image"
-                class="w-full h-full object-contain"
-              />
-            </div>
-            <div class="p-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-black uppercase">OTHER ORDAINED OFFICERS</h2>
+        <div class="h-1 w-20 bg-red-600 mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center">
+        <div
+          v-for="(member, idx) in otherMembers"
+          :key="idx"
+          class="group bg-white border rounded-lg shadow-md hover:shadow-xl transition-all overflow-hidden"
+        >
+          <div class="relative h-64 w-full bg-gray-100">
+            <img
+              :src="member.image"
+              class="w-full h-full object-contain"
+            />
+          </div>
+          <div class="p-6">
             <h3 class="text-xl font-bold uppercase text-gray-900">
               {{ member.name }}
             </h3>
@@ -104,10 +106,10 @@
               {{ member.role }}
             </p>
             <p class="text-gray-800 text-sm leading-relaxed">{{ member.bio }}</p>
-            </div>
           </div>
         </div>
-        </section>
+      </div>
+    </section>
 
     <!-- Floating Chat & Footer -->
     <FloatingChat />
@@ -120,10 +122,9 @@ import NavBar from './NavBar.vue'
 import Footer from './Footer.vue'
 import FloatingChat from './FloatingChat.vue'
 
-// Hero background image
 const heroImg = new URL('../assets/leader/hero.jpg', import.meta.url).href
 
-// Executive members (replace with actual leaders)
+// Executive Members
 const members = [
   {
     name: 'Ovr. NEHWON SAYE SUAH',
@@ -131,7 +132,7 @@ const members = [
     bio: 'Leads the district executive team and oversees all administrative operations.',
     image: new URL('../assets/leader/leader-1.jpg', import.meta.url).href
   },
-   {
+  {
     name: 'Elder Daniel S. Toe',
     role: 'Presiding Elder & Evangelism Director',
     bio: 'Leads evangelism, outreach, and community engagement initiatives.',
@@ -145,48 +146,45 @@ const members = [
   },
   {
     name: 'Deacon Edwin D. S. Lincoln',
-    role: 'Financial Secretary ',
+    role: 'Financial Secretary',
     bio: 'Manages financial operations and reporting for the district.',
-   image: new URL('../assets/leader/leader-4..jpg', import.meta.url).href
+    image: new URL('../assets/leader/leader-4..jpg', import.meta.url).href
   },
- 
   {
     name: 'Elder Dave Borglers',
     role: 'Men Leader',
     image: new URL('../assets/leader/leader-5.jpg', import.meta.url).href
   },
-   {
-    name: 'Elder Daniel NaWto ',
-    role: 'Estate comettie chair',
+  {
+    name: 'Elder Daniel NaWto',
+    role: 'Estate Committee Chair',
     image: new URL('../assets/leader/leader-8.jpg', import.meta.url).href
-  },
-  
+  }
+]
+
+// Other Ordained Officers
+const otherMembers = [
   {
     name: 'Deaconess Mai Sackor',
     role: 'Women’s Ministry Rep',
     image: new URL('../assets/leader/leader-7.jpg', import.meta.url).href
   },
-
-   {
+  {
     name: 'Deaconess Madie Sackie',
-    role: 'Members',
+    role: 'Member',
     image: new URL('../assets/leader/leader-6.jpg', import.meta.url).href
   },
-
-   {
+  {
     name: 'Deaconess Victoria Thampson',
-    role: 'Members',
+    role: 'Member',
     image: new URL('../assets/executive/member6.jpg', import.meta.url).href
   },
-   {
+  {
     name: 'Deaconess Victoria',
-    role: 'Members',
+    role: 'Member',
     image: new URL('../assets/executive/member6.jpg', import.meta.url).href
   }
-  
 ]
-
-
 </script>
 
 <style scoped>

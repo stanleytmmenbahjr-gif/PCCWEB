@@ -6,17 +6,20 @@
 >
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
 
-      <!-- Header (UNCHANGED) -->
-      <div class="text-center mb-8 sm:mb-16">
-        <h4 class="text-[#E31E24] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-2">
-          Join Our Family
-        </h4>
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-[#fff] uppercase">
-          Worship With Us
-        </h2>
-        <div class="w-20 h-1 bg-[#E31E24] mx-auto mt-4"></div>
-      </div>
+      <!-- Header (UNCHANGED) --><!-- Header -->
+<div class="text-center mb-6">
+  
+<h4 class="text-[#E31E24] font-bold tracking-[0.18em] uppercase text-[11px] mb-1">
+Join Our Family
+</h4>
 
+<h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-white uppercase leading-tight">
+Worship With Us
+</h2>
+
+<div class="w-14 h-[3px] bg-[#E31E24] mx-auto mt-2"></div>
+
+</div>
       <!-- Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
 

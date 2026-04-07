@@ -133,11 +133,11 @@ const leaders = [
     image: new URL('../assets/leader/fred.jpg', import.meta.url).href
   },
 
-  {
-    name: 'Mr. Saye ',
-    role: 'Secretary',
-    image: new URL('../assets/men/leader2.jpg', import.meta.url).href
-  },
+  // {
+  //   name: 'Mr. Saye ',
+  //   role: 'Secretary',
+  //   image: new URL('../assets/men/leader2.jpg', import.meta.url).href
+  // },
 
   
 ]

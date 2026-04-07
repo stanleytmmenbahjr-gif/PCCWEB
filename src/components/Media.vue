@@ -58,10 +58,10 @@
       </section>
 
       <!-- MEDIA SHOWCARDS WITH HOVER PLAY -->
-      <section class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20">
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-black uppercase text-center mb-8 sm:mb-10 md:mb-12">Featured Programs & Shows</h2>
+      <!-- <section class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-black uppercase text-center mb-8 sm:mb-10 md:mb-12">Featured Programs & Shows</h2> -->
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-10">
+        <!-- <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-10">
           <div
             v-for="(media, idx) in mediaItems"
             :key="idx"
@@ -69,8 +69,8 @@
           >
             <img :src="media.image" class="w-full h-48 sm:h-56 md:h-64 object-cover"/>
 
-            <!-- Overlay with Play Button -->
-            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-80 transition-opacity duration-500 flex items-center justify-center">
+            <!-   Overlay with Play Button -->
+            <!-- <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-80 transition-opacity duration-500 flex items-center justify-center">
               <div class="text-white text-4xl md:text-5xl opacity-0 group-hover:opacity-100 transition-all duration-500 scale-90 group-hover:scale-100">
                 
               </div>
@@ -82,7 +82,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> --> 
 
       <!-- LEADERSHIP CARDS -->
       <section class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 bg-gray-50 rounded-lg shadow-lg">

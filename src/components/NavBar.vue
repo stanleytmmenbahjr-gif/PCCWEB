@@ -48,8 +48,6 @@
                 <a href="#" class="nav-item text-xs lg:text-sm" @click.prevent="goTo('/about-us')">ABOUT US</a>
                 <div class="dropdown">
                   <a href="#" @click.prevent="goTo('/about-us')">ABOUT US</a>
-                  <a href="#" @click.prevent="goTo('/vision')">VISION</a>
-                  <a href="#">MISSION</a>
                   <!-- <a href="#">BRIEF HISTORY</a> -->
                 </div>
               </li>
@@ -87,7 +85,6 @@
                 <a href="#" class="nav-item text-xs lg:text-sm">CONTACT US</a>
                 <div class="dropdown">
                     <a href="#" @click.prevent="goTo('/contact')">How to reach us</a> 
-                   <a href="#" @click.prevent="goTo('/chat-with-us')">online chat</a> 
                     <a href="#" @click.prevent="goTo('/join')">Join the Church</a> 
 
                 </div>
@@ -133,9 +130,6 @@
           <div class="font-semibold text-[11px] mb-2">ABOUT US</div>
           <div class="pl-4 space-y-2 text-[10px] font-normal">
             <div @click.prevent="goTo('/about-us')" class="cursor-pointer text-gray-300 hover:text-white">ABOUT US</div>
-            <div @click.prevent="goTo('/vision')" class="cursor-pointer text-gray-300 hover:text-white">VISION</div>
-            <div class="text-gray-300 hover:text-white">MISSION</div>
-            <div class="text-gray-300 hover:text-white">BRIEF HISTORY</div>
           </div>
         </div>
         <div class="px-4 py-3 hover:bg-white/10 rounded transition-colors">
@@ -167,7 +161,6 @@
           <div class="font-semibold text-[11px] mb-2">CONTACT US</div>
             <div class="pl-4 space-y-2 text-[10px] font-normal">
             <div @click.prevent="goTo('/contact')" class="cursor-pointer text-gray-300 hover:text-white">HOW TO REACH US</div>
-            <div @click.prevent="goTo('/chat-with-us')" class="cursor-pointer text-gray-300 hover:text-white">ONLINE CHAT</div>
             <div @click.prevent="goTo('/join')" class="cursor-pointer text-gray-300 hover:text-white">JOIN THE CHURCH</div>
           </div>
         </div>

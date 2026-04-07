@@ -102,7 +102,7 @@
       <!-- YOUTH NEWS -->
       <section class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-24">
         <div class="text-center mb-8 sm:mb-10 md:mb-12">
-          <h2 class="text-2xl sm:text-3xl md:text-4xl font-black uppercase">Youth Ministry News</h2>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-black uppercase">Youth Ministry</h2>
           <div class="h-1 w-16 sm:w-20 bg-red-600 mt-3 sm:mt-4 mx-auto"></div>
         </div>
 
@@ -121,7 +121,7 @@
               <div
                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-active:opacity-100 transition flex items-center justify-center">
                 <span class="text-white border border-white px-3 sm:px-4 py-1 sm:py-2 text-xs sm:text-sm uppercase tracking-wider">
-                  Read More
+                  <!-- Read More -->
                 </span>
               </div>
             </div>
